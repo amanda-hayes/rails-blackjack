@@ -94,13 +94,13 @@ p house.hand[0].to_i + house.hand[1].to_i
 # end
 
 def winLogic
-    if player.hand > house.hand
+    if player.sum > house.sum
         p "You win this round!"
         # add 10 to their bankroll
-    elsif player.hand < house.hand
+    elsif player.sum < house.sum
         p "House wins this round!"
         # add 10 to house bankroll
-    else player.hand == house.hand
+    else player.sum == house.sum
         p "It's a tie! Time for a dance off!"
     end
 end
