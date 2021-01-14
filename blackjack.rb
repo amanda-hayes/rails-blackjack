@@ -38,18 +38,18 @@ end
 
 deck = []
 
-hand = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11]
+set = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11]
 
 # Make four full sets of cards to equal 52
 
 4.times do
-    hand.each do |hand|
-     cards = Cards.new hand
-        deck << hand
+    set.each do |set|
+     cards = Cards.new set
+        deck << set
     end
 end
 
-# p deck
+p deck
 
 p "Enter Your Name"
 player.name = gets.chomp
@@ -96,7 +96,7 @@ p house.hand[0].to_i + house.hand[1].to_i
 def winLogic
     if player.sum > house.sum
         p "You win this round!"
-        # add 10 to their bankroll
+        # add 10 to player's bankroll
     elsif player.sum < house.sum
         p "House wins this round!"
         # add 10 to house bankroll
@@ -104,6 +104,8 @@ def winLogic
         p "It's a tie! Time for a dance off!"
     end
 end
+
+p "Would you like to play again?"
 
 
 
